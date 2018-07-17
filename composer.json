@@ -1,0 +1,38 @@
+{
+    "name": "camuthig/faktory-messenger-transport",
+    "description": "A Symfony Messenger transport adapter for Faktory",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Chris Muthig",
+            "email": "camuthig@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/camuthig/faktory-client-php"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "camuthig/faktory-worker": "dev-master@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Camuthig\\FaktoryMessenger\\": "src"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.3",
+        "symfony/messenger": "^4.1"
+    },
+    "scripts": {
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
